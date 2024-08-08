@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org/" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Using ORM</title>
+</head>
+<body>
+<h3>Welcome to register Page</h3>
+<form th:action="@{/user/save}"  method="post">
+    <pre>
+    Name : <input type="text" name="userName" />
+    Email : <input type="text" name="userEmail" />
+    Passwd : <input type="text" name="userPwd" />
+    Roles :
+    ADMIN : <input type = "checkbox" name="userRoles" value="ADMIN" />
+    CUSTOMER : <input type = "checkbox" name="userRoles" value="CUSTOMER" />
+    <input type = "submit" name="" value="Create User" />
+    </pre>
+</form>
+
+
+<div> [[${message}]]</div>
+
+</body>
+</html>
